@@ -1,0 +1,7 @@
+{
+  "name": "gestao-financeira",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
