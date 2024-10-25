@@ -8,6 +8,8 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class DespesasPage {
   despesas: any[] = [];
+  descricao: string = '';  // Declaração da variável descricao
+  valor: number = 0;       // Declaração da variável valor
 
   constructor(private storage: Storage) {
     this.loadDespesas();
@@ -21,5 +23,7 @@ export class DespesasPage {
   async addDespesa(despesa: any) {
     this.despesas.push(despesa);
     await this.storage.set('despesas', this.despesas);
+    this.descricao = '';  // Limpa o campo após adicionar a despesa
+    this.valor = 0;       // Limpa o campo após adicionar a despesa
   }
 }
