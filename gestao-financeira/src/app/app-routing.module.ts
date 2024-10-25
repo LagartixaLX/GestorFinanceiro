@@ -23,6 +23,14 @@ const routes: Routes = [
     path: 'relatorios',
     loadChildren: () => import('./relatorios/relatorios.module').then( m => m.RelatoriosPageModule)
   },
+  {
+    path: 'add-transaction',
+    loadChildren: () => import('./pages/add-transaction/add-transaction.module').then( m => m.AddTransactionPageModule)
+  },
+  {
+    path: 'transaction-list',
+    loadChildren: () => import('./pages/transaction-list/transaction-list.module').then( m => m.TransactionListPageModule)
+  },
 ];
 
 @NgModule({
